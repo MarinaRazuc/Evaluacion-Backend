@@ -1,0 +1,11 @@
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\bin\Debug\netcoreapp2.1\Evaluacion_backend.deps.json
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\bin\Debug\netcoreapp2.1\Evaluacion_backend.runtimeconfig.json
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\bin\Debug\netcoreapp2.1\Evaluacion_backend.runtimeconfig.dev.json
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\bin\Debug\netcoreapp2.1\Evaluacion_backend.dll
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\obj\Debug\netcoreapp2.1\Evaluacion_backend.csproj.CoreCompileInputs.cache
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\obj\Debug\netcoreapp2.1\Evaluacion_backend.AssemblyInfoInputs.cache
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\obj\Debug\netcoreapp2.1\Evaluacion_backend.AssemblyInfo.cs
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\bin\Debug\netcoreapp2.1\Evaluacion_backend.pdb
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\obj\Debug\netcoreapp2.1\Evaluacion_backend.dll
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\obj\Debug\netcoreapp2.1\Evaluacion_backend.pdb
+C:\Users\marina\source\repos\Evaluacion\Evaluacion_backend\Evaluacion_backend\obj\Debug\netcoreapp2.1\Evaluacion_backend.csprojAssemblyReference.cache
