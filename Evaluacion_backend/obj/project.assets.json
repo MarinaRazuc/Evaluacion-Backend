@@ -2,6 +2,75 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "FluentValidation/6.3.4-alpha": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11-rc2-24027",
+          "System.Diagnostics.Debug": "4.0.11-rc2-24027",
+          "System.Diagnostics.Tools": "4.0.1-rc2-24027",
+          "System.Globalization": "4.0.11-rc2-24027",
+          "System.Linq": "4.1.0-rc2-24027",
+          "System.Linq.Expressions": "4.0.11-rc2-24027",
+          "System.Reflection": "4.1.0-rc2-24027",
+          "System.Reflection.Extensions": "4.0.1-rc2-24027",
+          "System.Resources.ResourceManager": "4.0.1-rc2-24027",
+          "System.Runtime": "4.1.0-rc2-24027",
+          "System.Runtime.Extensions": "4.1.0-rc2-24027",
+          "System.Text.RegularExpressions": "4.0.12-rc2-24027",
+          "System.Threading": "4.0.11-rc2-24027",
+          "System.Threading.Tasks": "4.0.11-rc2-24027"
+        },
+        "compile": {
+          "lib/netstandard1.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/FluentValidation.dll": {}
+        },
+        "resource": {
+          "lib/netstandard1.0/cs/FluentValidation.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.0/da/FluentValidation.resources.dll": {
+            "locale": "da"
+          },
+          "lib/netstandard1.0/de/FluentValidation.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.0/es/FluentValidation.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.0/fa/FluentValidation.resources.dll": {
+            "locale": "fa"
+          },
+          "lib/netstandard1.0/fi/FluentValidation.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/netstandard1.0/fr/FluentValidation.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.0/it/FluentValidation.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.0/nl/FluentValidation.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/netstandard1.0/pl/FluentValidation.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.0/pt/FluentValidation.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/netstandard1.0/ru/FluentValidation.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.0/sv/FluentValidation.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/netstandard1.0/zh-CN/FluentValidation.resources.dll": {
+            "locale": "zh-CN"
+          }
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -327,6 +396,19 @@
         },
         "runtime": {
           "lib/net452/Nancy.Hosting.Self.dll": {}
+        }
+      },
+      "Nancy.Validation.FluentValidation/2.0.0-barneyrubble": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "6.3.4-alpha",
+          "Nancy": "2.0.0-barneyrubble"
+        },
+        "compile": {
+          "lib/netstandard1.6/Nancy.Validation.FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Nancy.Validation.FluentValidation.dll": {}
         }
       },
       "NETStandard.Library/2.0.3": {
@@ -1501,6 +1583,101 @@
     }
   },
   "libraries": {
+    "FluentValidation/6.3.4-alpha": {
+      "sha512": "P9rzS4hTOpvdz0aeu7BPvUe3Dug4tD0zLD21SwEGAsBgrrStTit9p3cHlGbnshf0/8AaPPyBuIlf2mP6iVYSMg==",
+      "type": "package",
+      "path": "fluentvalidation/6.3.4-alpha",
+      "files": [
+        ".signature.p7s",
+        "fluentvalidation.6.3.4-alpha.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/Net45/FluentValidation.XML",
+        "lib/Net45/FluentValidation.dll",
+        "lib/Net45/FluentValidation.pdb",
+        "lib/Net45/cs/FluentValidation.resources.dll",
+        "lib/Net45/da/FluentValidation.resources.dll",
+        "lib/Net45/de/FluentValidation.resources.dll",
+        "lib/Net45/es/FluentValidation.resources.dll",
+        "lib/Net45/fa/FluentValidation.resources.dll",
+        "lib/Net45/fi/FluentValidation.resources.dll",
+        "lib/Net45/fr/FluentValidation.resources.dll",
+        "lib/Net45/it/FluentValidation.resources.dll",
+        "lib/Net45/ko/FluentValidation.resources.dll",
+        "lib/Net45/mk/FluentValidation.resources.dll",
+        "lib/Net45/nl/FluentValidation.resources.dll",
+        "lib/Net45/pl/FluentValidation.resources.dll",
+        "lib/Net45/pt/FluentValidation.resources.dll",
+        "lib/Net45/ru/FluentValidation.resources.dll",
+        "lib/Net45/sv/FluentValidation.resources.dll",
+        "lib/Net45/tr/FluentValidation.resources.dll",
+        "lib/Net45/zh-CN/FluentValidation.resources.dll",
+        "lib/netstandard1.0/FluentValidation.dll",
+        "lib/netstandard1.0/FluentValidation.pdb",
+        "lib/netstandard1.0/cs/FluentValidation.resources.dll",
+        "lib/netstandard1.0/da/FluentValidation.resources.dll",
+        "lib/netstandard1.0/de/FluentValidation.resources.dll",
+        "lib/netstandard1.0/es/FluentValidation.resources.dll",
+        "lib/netstandard1.0/fa/FluentValidation.resources.dll",
+        "lib/netstandard1.0/fi/FluentValidation.resources.dll",
+        "lib/netstandard1.0/fr/FluentValidation.resources.dll",
+        "lib/netstandard1.0/it/FluentValidation.resources.dll",
+        "lib/netstandard1.0/nl/FluentValidation.resources.dll",
+        "lib/netstandard1.0/pl/FluentValidation.resources.dll",
+        "lib/netstandard1.0/pt/FluentValidation.resources.dll",
+        "lib/netstandard1.0/ru/FluentValidation.resources.dll",
+        "lib/netstandard1.0/sv/FluentValidation.resources.dll",
+        "lib/netstandard1.0/zh-CN/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/FluentValidation.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/FluentValidation.pdb",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/cs/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/da/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/de/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/es/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/fa/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/fi/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/fr/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/it/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/nl/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/pl/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/pt/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/ru/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/sv/FluentValidation.resources.dll",
+        "lib/portable-net40+sl50+wp80+win8+wpa81/zh-CN/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/FluentValidation.XML",
+        "lib/portable-net45+wp80+win8+wpa81/FluentValidation.dll",
+        "lib/portable-net45+wp80+win8+wpa81/FluentValidation.pdb",
+        "lib/portable-net45+wp80+win8+wpa81/cs/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/da/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/de/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/es/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/fa/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/fi/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/fr/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/it/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/nl/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/pl/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/pt/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/ru/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/sv/FluentValidation.resources.dll",
+        "lib/portable-net45+wp80+win8+wpa81/zh-CN/FluentValidation.resources.dll",
+        "lib/uap10.0/FluentValidation.dll",
+        "lib/uap10.0/FluentValidation.pdb",
+        "lib/uap10.0/cs/FluentValidation.resources.dll",
+        "lib/uap10.0/da/FluentValidation.resources.dll",
+        "lib/uap10.0/de/FluentValidation.resources.dll",
+        "lib/uap10.0/es/FluentValidation.resources.dll",
+        "lib/uap10.0/fa/FluentValidation.resources.dll",
+        "lib/uap10.0/fi/FluentValidation.resources.dll",
+        "lib/uap10.0/fr/FluentValidation.resources.dll",
+        "lib/uap10.0/it/FluentValidation.resources.dll",
+        "lib/uap10.0/nl/FluentValidation.resources.dll",
+        "lib/uap10.0/pl/FluentValidation.resources.dll",
+        "lib/uap10.0/pt/FluentValidation.resources.dll",
+        "lib/uap10.0/ru/FluentValidation.resources.dll",
+        "lib/uap10.0/sv/FluentValidation.resources.dll",
+        "lib/uap10.0/zh-CN/FluentValidation.resources.dll"
+      ]
+    },
     "Microsoft.CSharp/4.0.1": {
       "sha512": "17h8b5mXa87XYKrrVqdgZ38JefSUqLChUQpXgSnpzsM0nDOhE40FTeNWOJ/YmySGV6tG6T8+hjz6vxbknHJr6A==",
       "type": "package",
@@ -1989,6 +2166,19 @@
         "lib/net452/Nancy.Hosting.Self.xml",
         "nancy.hosting.self.2.0.0-barneyrubble.nupkg.sha512",
         "nancy.hosting.self.nuspec"
+      ]
+    },
+    "Nancy.Validation.FluentValidation/2.0.0-barneyrubble": {
+      "sha512": "lW5gDbLhBhoyDhyOkGJGufRv6zJgE7AQME7gKAHfiOxMxIiKXKQZK3T5VCc4vbifV0SQhYt961GHQYoCXEO4kQ==",
+      "type": "package",
+      "path": "nancy.validation.fluentvalidation/2.0.0-barneyrubble",
+      "files": [
+        "lib/net452/Nancy.Validation.FluentValidation.dll",
+        "lib/net452/Nancy.Validation.FluentValidation.xml",
+        "lib/netstandard1.6/Nancy.Validation.FluentValidation.dll",
+        "lib/netstandard1.6/Nancy.Validation.FluentValidation.xml",
+        "nancy.validation.fluentvalidation.2.0.0-barneyrubble.nupkg.sha512",
+        "nancy.validation.fluentvalidation.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {
@@ -5411,7 +5601,8 @@
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.NETCore.App >= 2.1.0",
       "Nancy >= 2.0.0-barneyrubble",
-      "Nancy.Hosting.Self >= 2.0.0-barneyrubble"
+      "Nancy.Hosting.Self >= 2.0.0-barneyrubble",
+      "Nancy.Validation.FluentValidation >= 2.0.0-barneyrubble"
     ]
   },
   "packageFolders": {
@@ -5465,6 +5656,10 @@
             "version": "[2.0.0-barneyrubble, )"
           },
           "Nancy.Hosting.Self": {
+            "target": "Package",
+            "version": "[2.0.0-barneyrubble, )"
+          },
+          "Nancy.Validation.FluentValidation": {
             "target": "Package",
             "version": "[2.0.0-barneyrubble, )"
           }

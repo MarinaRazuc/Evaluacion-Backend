@@ -5,6 +5,7 @@ using Nancy;
 using System.Linq;
 using Evaluacion_backend.Models;
 using Nancy.ModelBinding;
+using Nancy.Validation;
 
 namespace Evaluacion_backend
 {
@@ -36,16 +37,27 @@ namespace Evaluacion_backend
             //agrega un cliente
             Post("/add/{id}", args => {
                 var model = this.Bind<Cliente>();
-              
-                if (!clientes.ContainsKey(args.Id)) {
-                    clientes.Add(args.Id, model);
-                    return model;
+                var result = this.Validate(model);
+
+                if (result.IsValid)
+                {
+                    if (!clientes.ContainsKey(args.Id))
+                    {
+                        clientes.Add(args.Id, model);
+                        return model;
+                    }
+                    else
+                    {
+                        clientes.TryGetValue(args.Id, out Cliente cl);
+                        return "Error, ya existe un cliente con Id " + args.Id + " . \n \n" + cl;
+                    }
                 }
                 else
                 {
-                    clientes.TryGetValue(args.Id, out Cliente cl);
-                    return "Error, ya existe un cliente con Id " + args.Id + " . \n \n"+cl;
+                    return 400;
+                   
                 }
+                
             });
 
             //actualiza el cliente id
