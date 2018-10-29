@@ -21,5 +21,7 @@ namespace Evaluacion_backend.Models
         [Required]
         [MaxLength(30)]
         public string Direccion { get; set; }
+
+        
     }
 }

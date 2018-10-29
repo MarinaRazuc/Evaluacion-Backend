@@ -17,6 +17,10 @@ namespace Evaluacion_backend
             RuleFor(x => x.Nombre).NotEmpty().WithMessage("Nombre Requerido");
             RuleFor(x => x.Apellido).NotEmpty().WithMessage("Apellido Requerido");
 
+            RuleFor(x => x.Nombre).Length(1,15).WithMessage("Nombre debe contener entre 1 y 15 caracteres");
+            RuleFor(x => x.Apellido).Length(1, 30).WithMessage("Apellido debe contener entre 1 y 30 caracteres");
+            RuleFor(x => x.Direccion).Length(1, 30).WithMessage("Dirección debe contener entre 1 y 30 caracteres");
+
 
         }
     }

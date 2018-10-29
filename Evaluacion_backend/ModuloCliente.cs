@@ -6,6 +6,7 @@ using System.Linq;
 using Evaluacion_backend.Models;
 using Nancy.ModelBinding;
 using Nancy.Validation;
+using FluentValidation.Results;
 
 namespace Evaluacion_backend
 {
@@ -49,13 +50,13 @@ namespace Evaluacion_backend
                     else
                     {
                         clientes.TryGetValue(args.Id, out Cliente cl);
-                        return "Error, ya existe un cliente con Id " + args.Id + " . \n \n" + cl;
+                        return "Error, ya existe un cliente con Id " + args.Id + " . \n \n" + cl.ToString();
                     }
                 }
                 else
                 {
-                    return 400;
-                   
+                    var resus = result.Errors.Values;
+                    return resus;
                 }
                 
             });
@@ -63,16 +64,27 @@ namespace Evaluacion_backend
             //actualiza el cliente id
             Put("update/{id}", args => {
                 var model = this.Bind<Cliente>();
-                if (clientes.ContainsKey(args.Id))
+                var result = this.Validate(model);
+
+                if (result.IsValid)
                 {
-                    clientes.Remove(args.Id);
-                    clientes.Add(args.Id, model);
-                    return model;
+                    if (clientes.ContainsKey(args.Id))
+                    {
+                        clientes.Remove(args.Id);
+                        clientes.Add(args.Id, model);
+                        return model;
+                    }
+                    else
+                    {
+                        return "Error, no existe un cliente con Id " + args.Id + " .";
+                    }
                 }
                 else
                 {
-                    return "Error, no existe un cliente con Id " + args.Id + " .";
+                    
+                    return result.Errors;
                 }
+                
             });
 
 
