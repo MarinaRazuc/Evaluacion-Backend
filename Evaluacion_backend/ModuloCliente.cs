@@ -56,7 +56,13 @@ namespace Evaluacion_backend
                 else
                 {
                     var resus = result.Errors.Values;
-                    return resus;
+                    string cartel="Error(es): ";
+                    int largo = resus.Count;
+                    for(int i=0; i < largo; i++)
+                    {
+                        cartel = cartel + " " +resus.ElementAt(i).ElementAt(i)+" - ";
+                    }
+                    return cartel;
                 }
                 
             });
@@ -81,8 +87,15 @@ namespace Evaluacion_backend
                 }
                 else
                 {
-                    
-                    return result.Errors;
+                    var resus = result.Errors.Values;
+                    string cartel = "Error(es): ";
+                    int largo = resus.Count;
+                    for (int i = 0; i < largo; i++)
+                    {
+                        cartel = cartel + " " + resus.ElementAt(i).ElementAt(i) + " - ";
+                    }
+                    return cartel;
+             
                 }
                 
             });
@@ -95,7 +108,7 @@ namespace Evaluacion_backend
                 var res = clientes.Remove(args.Id);
                 if (res)
                 {
-                    return "Cliente " + args.Id + " eliminado. \n"+cl;
+                    return "Cliente " + args.Id + " eliminado. \n"+cl.ToString();
                 }
                 else
                 {
