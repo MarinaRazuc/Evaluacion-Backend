@@ -24,14 +24,20 @@ namespace Evaluacion_backend
             //devuelve el cliente asociado con id si lo hubiera
             Get("/{id}", args => {
                 Cliente cl;
-                clientes.TryGetValue(args.Id, out cl);
+                try {
+                    clientes.TryGetValue(args.Id, out cl);
+                }
+                catch(Exception e) {
+                    return e.Message;
+                }
+               
                 if (cl != null)
                 {
                     return cl;
                 }
                 else
                 {
-                    return "Error, no existen clientes con Id "+args.Id+" .";
+                    return "Error, no existe un cliente con Id "+args.Id+" .";
                 }
             });
 
@@ -42,7 +48,17 @@ namespace Evaluacion_backend
 
                 if (result.IsValid)
                 {
-                    if (!clientes.ContainsKey(args.Id))
+                    bool resu=false;
+                    try
+                    {
+                        resu = clientes.ContainsKey(args.Id);
+
+                    }catch(Exception e)
+                    {
+                        return e.Message;
+                    }
+
+                    if (!resu)
                     {
                         clientes.Add(args.Id, model);
                         return model;
@@ -50,17 +66,17 @@ namespace Evaluacion_backend
                     else
                     {
                         clientes.TryGetValue(args.Id, out Cliente cl);
-                        return "Error, ya existe un cliente con Id " + args.Id + " . \n \n" + cl.ToString();
+                        return "Error, ya existe un cliente con Id " + args.Id +".";
                     }
                 }
                 else
                 {
                     var resus = result.Errors.Values;
-                    string cartel="Error(es): ";
+                    string cartel="Error(es): \n";
                     int largo = resus.Count;
                     for(int i=0; i < largo; i++)
                     {
-                        cartel = cartel + " " +resus.ElementAt(i).ElementAt(i)+" - ";
+                        cartel = cartel + " " +resus.ElementAt(i).ElementAt(0)+"\n ";
                     }
                     return cartel;
                 }
@@ -74,7 +90,17 @@ namespace Evaluacion_backend
 
                 if (result.IsValid)
                 {
-                    if (clientes.ContainsKey(args.Id))
+                    bool resu = false;
+                    try
+                    {
+                        resu = clientes.ContainsKey(args.Id);
+                    }
+                    catch(Exception e)
+                    {
+                        return e.Message;
+                    }
+
+                    if (resu)
                     {
                         clientes.Remove(args.Id);
                         clientes.Add(args.Id, model);
@@ -88,11 +114,11 @@ namespace Evaluacion_backend
                 else
                 {
                     var resus = result.Errors.Values;
-                    string cartel = "Error(es): ";
+                    string cartel = "Error(es): \n";
                     int largo = resus.Count;
                     for (int i = 0; i < largo; i++)
                     {
-                        cartel = cartel + " " + resus.ElementAt(i).ElementAt(i) + " - ";
+                        cartel = cartel + " " + resus.ElementAt(i).ElementAt(0) + " \n";
                     }
                     return cartel;
              
@@ -104,11 +130,19 @@ namespace Evaluacion_backend
             Delete("delete/{id}", args =>
             {
                 Cliente cl;
-                clientes.TryGetValue(args.Id, out cl);
+                try
+                {
+                    clientes.TryGetValue(args.Id, out cl);
+                }
+                catch(Exception e)
+                {
+                    return e.Message;
+                }
+
                 var res = clientes.Remove(args.Id);
                 if (res)
                 {
-                    return "Cliente " + args.Id + " eliminado. \n"+cl.ToString();
+                    return "Cliente " + args.Id + " eliminado. \n";
                 }
                 else
                 {

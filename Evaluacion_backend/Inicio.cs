@@ -5,7 +5,7 @@
 
     using Nancy.Hosting.Self;
 
-    class Program
+    class Inicio
     {
         static void Main()
         {
